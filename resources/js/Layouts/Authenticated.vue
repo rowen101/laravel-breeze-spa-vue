@@ -26,10 +26,10 @@
                                     Dashboard
                                 </BreezeNavLink>
                                 <BreezeNavLink
-                                    :href="route('monitoring')"
-                                    :active="route().current('monitoring')"
+                                    :href="route('dailytask')"
+                                    :active="route().current('dailytask')"
                                 >
-                                    Monitoring
+                                    DailyTask
                                 </BreezeNavLink>
                             </div>
                         </div>
@@ -134,10 +134,10 @@
                             Dashboard
                         </BreezeResponsiveNavLink>
                         <BreezeResponsiveNavLink
-                            :href="route('monitoring')"
-                            :active="route().current('monitoring')"
+                            :href="route('dailytask')"
+                            :active="route().current('dailytask')"
                         >
-                            Monitoring
+                            DailyTask
                         </BreezeResponsiveNavLink>
                     </div>
 

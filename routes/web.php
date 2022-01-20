@@ -27,15 +27,17 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/monitoring', function () {
-    return Inertia::render('Monitoring');
-})->middleware(['auth', 'verified'])->name('monitoring');
+// Route::get('/monitoring', function () {
+
+//     return Inertia::render('Monitoring');
+// })->middleware(['auth', 'verified'])->name('monitoring');
 
 
 Route::middleware('auth')
     ->group(
         function () {
-            Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+            Route::get('/dailytask', [App\Http\Controllers\DailyTaskController::class, 'index'])->name('dailytask');
+            // Route::get('/monitoring', 'AboutComponent');
         }
     );
 require __DIR__ . '/auth.php';
